@@ -1,2 +1,1 @@
-# apache-php-phpmyadmin-mysql
-docker-compose yml
+tolong di support masih dalam tahap pengembangan
