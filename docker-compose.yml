@@ -2,8 +2,6 @@ version: "3.2"
 services:
   php:
     build: './php/'
-    networks:
-      - belakang
     volumes:
       - ./public_html/:/var/www/html/
   web:
@@ -11,29 +9,29 @@ services:
     depends_on:
       - php
       - db
-    networks:
-      - depan
-      - belakang
     ports:
       - "8181:80"
     volumes:
       - ./public_html/:/var/www/html/
-  myadmin:
-    image: phpmyadmin/phpmyadmin
-    container_name: phpmyadmin
-    ports:
-        - "8282:80"
-    environment:
-        - PMA_ARBITRARY=1
-    restart: always
-    depends_on:
-       - mysqldb
   db:
-    image: mysql:5.6.40
-    networks:
-      - belakang
+    image: mysql:5.7
+    user: "root"
+    restart: always
+    ports:
+      - 3306:3306
     environment:
       - MYSQL_ROOT_PASSWORD=rootpassword
-networks:
-  depan:
-  belakang:
+      - MYSQL_DATABASE=dbvote
+
+  myadmin:
+    image: phpmyadmin/phpmyadmin
+    ports:
+        - "8282:80"
+    links:
+      - db:db
+    restart: always
+    environment:
+      - MYSQL_USERNAME=root
+      - MYSQL_ROOT_PASSWORD=rootpassword
+    depends_on:
+       - db
