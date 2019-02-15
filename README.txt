@@ -8,8 +8,8 @@ path:
 |_ ./public_html/
      |___ index.html
 buatlah file dan direktori dengan nama tersebut. dan sesuaikan dengan direktori yang ingin di tempati di docker compose
+setelah di buat jalankan perintah "docker-compose up -d"
 
 
 
-
-tolong di support masih dalam tahap pengembangan
+Sudah dalam fase stabil untuk pembahsananya akan ada di web saya : mahbubihamdani.blogspot.com
