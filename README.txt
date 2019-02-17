@@ -13,4 +13,4 @@ setelah di buat jalankan perintah "docker-compose up -d"
 
 
 
-Sudah dalam fase stabil untuk pembahsananya akan ada di web saya : mahbubihamdani.blogspot.com
+Sudah dalam fase stabil untuk pembahsananya akan ada di web saya : ninenoob.blogspot.com
