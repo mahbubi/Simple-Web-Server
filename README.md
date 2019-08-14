@@ -1,3 +1,4 @@
+```
 File ./
 path:
 |_ ./apache/
@@ -8,6 +9,7 @@ path:
 |_ ./public_html/
 |    |___ index.html
 |_ ./docker-compose.yml
+```
 buatlah file dan direktori dengan nama tersebut. dan sesuaikan dengan direktori yang ingin di tempati di docker compose
 setelah di buat jalankan perintah "docker-compose up -d"
 
